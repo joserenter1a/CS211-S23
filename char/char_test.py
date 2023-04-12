@@ -8,7 +8,7 @@ class TestCharMethods(unittest.TestCase):
 
     def test_init(self):
         c = Char('c')
-
+        assert isinstance(c, Char)
 
     def test_str(self):
         c = Char('c')
@@ -51,6 +51,15 @@ class TestCharMethods(unittest.TestCase):
     def test_blank(self):
         b = Char(' ')
         assert len(b)  == 1
+    
+    def test_caps(self):
+        c = Char('c')
+        x = c.capitalize()
+        assert x == 'C'
+        
+    def test_num(self):
+        x = Char('1')
+        assert x.isnumeric() 
 
 if __name__ == '__main__':
     unittest.main()

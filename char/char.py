@@ -7,31 +7,39 @@ A character can be a single letter, number, symbol, or whitespace
 """
 
 
-class Char:
-    def __init__(_self, c: str):
+class Char(str):
 
-        if len(c) != 1:
-            return TypeError("Incorrect initialization of Char object")
-        
-        _self.c = c
+    def __new__(cls, char):
+        """
+        Creates a new instance of a class and returns it. Allows for
+        customization of object creation
+        """
+        if len(char) != 1:
+            return TypeError("Expected single character") # ensure correct usage
+        return super().__new__(cls, char) #inherits from built in string class
+        # super creates a temporary str object, which allows you to call methods
+        # on the 'super' class or parent class, str
 
-    def __str__(_self):
-        return f"{_self.c}"
 
-    def __repr__(_self):
-        return _self.c
+    def __init__(self, c):
+        """
+        Constructor function
+        """
+        self.c = c
+
+    def __str__(self):
+        """
+        Casts type to a string. Also used for printing
+        """
+        return f"{self.c}"
     
-    def __eq__(_self, other):
-        return _self.c == other.c
-
-    def __add__(_self, op):
-        return _self.c + op.c
-
-    def __gt__(_self, op):
-        return _self.c > op.c
-
-    def __lt__(_self, op):
-        return _self.c < op.c
-
-    def __len__(_self):
-        return len(_self.c)
+    def __eq__(self, other):
+        """
+        Checks equality
+        """
+        if isinstance(other, Char):
+            return self.c == other.c
+        elif isinstance(other, str):
+            return self.c == other
+        else:
+            return False
