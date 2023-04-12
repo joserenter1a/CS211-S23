@@ -8,25 +8,30 @@ A character can be a single letter, number, symbol, or whitespace
 
 
 class Char:
-    def __init__(self, c: str):
+    def __init__(_self, c: str):
+
         if len(c) != 1:
             return TypeError("Incorrect initialization of Char object")
-        self.c = c
+        
+        _self.c = c
 
-    def __str__(self):
-        return f"{self.c}"
+    def __str__(_self):
+        return f"{_self.c}"
 
-    def __repr__(self):
-        return self.c
+    def __repr__(_self):
+        return _self.c
+    
+    def __eq__(_self, other):
+        return _self.c == other.c
 
-    def __add__(self, op):
-        return self.c + op.c
+    def __add__(_self, op):
+        return _self.c + op.c
 
-    def __gt__(self, op):
-        return self.c > op.c
+    def __gt__(_self, op):
+        return _self.c > op.c
 
-    def __lt__(self, op):
-        return self.c < op.c
+    def __lt__(_self, op):
+        return _self.c < op.c
 
-    def __len__(self):
-        return len(self.c)
+    def __len__(_self):
+        return len(_self.c)

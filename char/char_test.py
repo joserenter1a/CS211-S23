@@ -1,17 +1,14 @@
 """
 A test suite for our Character class
-
-
 """
-
 import unittest
 from char import *
-
 
 class TestCharMethods(unittest.TestCase):
 
     def test_init(self):
         c = Char('c')
+
 
     def test_str(self):
         c = Char('c')
@@ -27,6 +24,11 @@ class TestCharMethods(unittest.TestCase):
         x = Char('x')
         assert c + x == 'cx'
         assert type(c + x) == str
+    
+    def test_eq(self):
+        b = Char('b')
+        c = Char('b')
+        assert b == c
 
     def test_gt(self):
         c = Char('c')
@@ -45,3 +47,11 @@ class TestCharMethods(unittest.TestCase):
         x = Char('x')
         assert len(c) and len(x) == 1
         assert len(c) - len(x) == 0
+
+    def test_blank(self):
+        b = Char(' ')
+        assert len(b)  == 1
+
+if __name__ == '__main__':
+    unittest.main()
+    
