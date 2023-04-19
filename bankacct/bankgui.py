@@ -1,5 +1,10 @@
+"""
+A simple GUI for a bank account
+"""
+
 import tkinter as tk
 from bankacct_sol import BankAccount
+
 
 class BankAccountUI:
     def __init__(self, root):

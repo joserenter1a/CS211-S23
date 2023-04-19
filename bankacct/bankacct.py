@@ -2,11 +2,10 @@
 Bank Account Class
 
 - Encapsulates the data and methods related to a bank acct.
-- This class has two private attributes, __account_number and __balance
+- This class has two private attributes, account_number and balance
     these are hidden from the user and can only be accessed through the public
     methods of the class. i.e. deposit(), withdraw(), and get_balance()
-
-
+     HINT: Specify private members with __ before the variable names.
 
 """
 
