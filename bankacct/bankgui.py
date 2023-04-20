@@ -3,7 +3,7 @@ A simple GUI for a bank account
 """
 
 import tkinter as tk
-from bankacct_sol import BankAccount
+from bankacct import BankAccount
 
 
 class BankAccountUI:
