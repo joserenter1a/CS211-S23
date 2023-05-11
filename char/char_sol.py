@@ -7,7 +7,7 @@ A character can be a single letter, number, symbol, or whitespace
 """
 
 
-class Char(str):  # inherit from str class
+class Char(str):
 
     def __new__(cls, char):
         """
@@ -25,21 +25,22 @@ class Char(str):  # inherit from str class
         """
         Constructor function
         """
-        # TODO
+        self.c = c
 
     def __str__(self):
         """
         Casts type to a string. Also used for printing
         """
-        # TODO
+        return f"{self.c}"
 
     def __eq__(self, other):
         """
-        Checks equality. Equality entails type and value
+        Checks equality
         """
-        # TODO
-
-
-
-
-    # Why do we not need any more methods?
+        # checks that other, is of type Char
+        if isinstance(other, Char):
+            return self.c == other.c
+        elif isinstance(other, str):
+            return self.c == other
+        else:
+            return False

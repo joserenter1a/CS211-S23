@@ -32,6 +32,7 @@ print(bin(one | two))
 
 print(bin(one & two))
 # why is this zero?
+
 print("-" * 50)
 
 """
@@ -39,8 +40,8 @@ Bit shifting
 """
 bin_FF = 0b11111111
 
-#hex_FF = 0xFF
-#print(hex_FF == bin_FF)
+hex_FF = 0xFF
+print(hex_FF == bin_FF)
 
 print("Original binary value of 255")
 print(bin(bin_FF))

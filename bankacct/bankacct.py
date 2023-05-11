@@ -7,6 +7,7 @@ Bank Account Class
     methods of the class. i.e. deposit(), withdraw(), and get_balance()
      HINT: Specify private members with __ before the variable names.
 
+    self.__private_member
 """
 
 
@@ -17,7 +18,7 @@ class BankAccount:
         initializes the private attributes with values passed as arguments
         """
         # TODO
-    
+
     def deposit(self, amount):
         """
         Adds the specified amount to the account balance
@@ -29,13 +30,17 @@ class BankAccount:
         Subtracts the specified amount from the balance, given that there 
         are sufficient funds available
         """
-        # TODO
-    
+        if amount <= self.get_balance():
+            new_bal = self.get_balance() - amount
+        return new_bal
+
     def get_balance(self):
         """
         returns the current balance in the account
         """
-        # TODO
+        return self.__balance
+
+
 """
 By encapsulating the data and methods within the class, we have achieved several benefits.
 

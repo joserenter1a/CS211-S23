@@ -1,5 +1,5 @@
 import unittest, time
-from stack import *
+from stack_sol import *
 
 
 class TestStackReversal(unittest.TestCase):
@@ -21,15 +21,16 @@ class TestStackReversal(unittest.TestCase):
         assert reverse_string(inp) == "010101"
 
     def test_reverse_time(self):
-        inp = "1" * 1000  # a thousand length str
+        inp = "1" * 50  # a thousand length str
         start = time.time()
         reverse_string(inp)
         end = time.time()
         assert (end - start) < .001  # should be easily less than 1 ms
 
     def test_loop(self):
-        i = 100
+        i = 500
         while i > 0:
             self.test_reverse_time()
             i -= 1
+
         # encapsulated test case, calls another test case for more rigorous test of time

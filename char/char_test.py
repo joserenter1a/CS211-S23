@@ -4,6 +4,7 @@ A test suite for our Character class
 import unittest
 from char import *
 
+
 class TestCharMethods(unittest.TestCase):
 
     def test_init(self):
@@ -24,7 +25,7 @@ class TestCharMethods(unittest.TestCase):
         x = Char('x')
         assert c + x == 'cx'
         assert type(c + x) == str
-    
+
     def test_eq(self):
         b = Char('b')
         c = Char('b')
@@ -50,17 +51,17 @@ class TestCharMethods(unittest.TestCase):
 
     def test_blank(self):
         b = Char(' ')
-        assert len(b)  == 1
-    
+        assert len(b) == 1
+
     def test_caps(self):
         c = Char('c')
         x = c.capitalize()
         assert x == 'C'
-        
+
     def test_num(self):
         x = Char('1')
-        assert x.isnumeric() 
+        assert x.isnumeric()
+
 
 if __name__ == '__main__':
     unittest.main()
-    

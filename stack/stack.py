@@ -19,6 +19,7 @@ def reverse_string(string: str):
     # iterate over every char in our input string
         # push the char onto our stack
     # create an empty string, this will be our reversed str
+
     # while the stack is non empty
         # pop what is on the stack
         # & accumulate it to our empty string
