@@ -5,6 +5,15 @@ Author: Jose Renteria
 For CS211 Class Encore
 
 MxN matrix
+
+To test with matrix text files (i.e matrixBIG.txt, matrixSM.txt, etc)
+
+    i. Make sure the txt file is in the same directory
+    ii. open a new terminal
+    iii. insert this command
+            python3 matrix_sol.py < matrixBIG.txt
+    iv. try with any matrix___.txt files
+    v. Bonus, look at BASHFORLOOP.txt to see how to create your own Matrix test files
 """
 
 class Matrix:
