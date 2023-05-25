@@ -57,7 +57,7 @@ class Matrix:
         mid_row = (start_row + end_row) // 2
         mid_col = (start_col + end_col) // 2
         # index at the middle value
-        mid_value = self[mid_row][mid_col]
+        mid_value = self.matrix[mid_row][mid_col]
         
         # base case, if the middle is the target, return it
         if mid_value == target:
