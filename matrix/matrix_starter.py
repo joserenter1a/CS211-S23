@@ -9,28 +9,24 @@ MxN matrix
 
 class Matrix:
     def __init__(self):
+        # TODO 
+        pass # Remove before starting
+
         # Take input for the Rows and Columns
-        self.M = int(input("Rows: "))
-        self.N = int(input("Columns: "))
 
         # Initialize an empty list to hold the matrix values
-        self.matrix = []
+        
         # Traverse M columns
-        for i in range(self.M):
             # inner list, remeber a matrix is a list of lists
-            l = []
             # Traverse N rows
-            for j in range(self.N):
                 # Ask user for the values to be inputted into the matrix
-                values = int(input())
                 # append those values into our inner list
-                l.append(values)
             # append the inner list to our matrix
-            self.matrix.append(l)
-
+        
     def __getitem__(self, i):
         # This is used for indexing/subscripting
-        return self.matrix[i]
+        # TODO
+        pass # Remove before starting
     
     def __str__(self):
         # str method for printing matrix with no brackets or formatting
@@ -93,6 +89,9 @@ if __name__ == '__main__':
     # Matrix constructor
     matrix = Matrix()
     print(line)
+
+    # Test usage, run this in the terminal, try the other matrix sizes 
+    # python3 matrix_sol.py < matrixBIG.txt
 
     # formatted print
     matrix.print_matrix()
